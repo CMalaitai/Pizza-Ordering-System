@@ -7,7 +7,7 @@
 
 **Resource title**: "Take Away" Ordering Program
 
-**Resouce reference**: Digital Technologies & Hangarau Matihiko 2.7B
+**Resource reference**: Digital Technologies & Hangarau Matihiko 2.7B
 
 Introduction/Kupu Arataki
 This assessment activity requires you to develop and test a computer program to process phone orders for a take away pizza business, using advanced programming techniques. 
@@ -50,27 +50,27 @@ Your program must meet the following specifications:
 - If the order is for pick up:
   - the program should ask the phone operator to enter the customer’s name.
 - The program should allow the phone operator to input how many pizzas the customer would like (maximum 5).
-- A menu of at least 12 pizzanamesshould be presented to the phone operator.
+- A menu of at least 12 pizza names should be presented to the phone operator.
 - Each pizza to be ordered should be selected from the choices available on the menu and the order information should be stored.
-- The cost of the first seven (regular) pizzason the menu is $8.50 and the rest are $5 more as they are gourmet pizzas.
+- The cost of the first seven (regular) pizzas on the menu is $8.50 and the rest are $5 more as they are gourmet pizzas.
 - When the order is finished:
-  - the names of ordered pizzasand their individual pricesshould be displayed
-  - the total costof the order,including any delivery charge,should be displayed
-  - customer name should be displayedif the pizzais for delivery the address and phone number should be displayed.
+  - the names of ordered pizzas and their individual prices should be displayed
+  - the total cost of the order,including any delivery charge,should be displayed
+  - customer name should be displayedif the pizza is for delivery the address and phone number should be displayed.
 - The program should allow the operator to cancel the order.
 - After the order information has been displayed the program should be ready to accept another order or exit.
 
 You need to think about:
 - How will you program and present the menu and receive user input? Will you use a GUI and write event-handling code, or will you use a text-based menu and typed user input?
-- How will you store your data? What variables will you require and what type of data will your variables store (e.g. text, numeric, Boolean)? Will you storedata in collections (e.g.lists, arrays or dictionaries) to improve the structure, flexibility and robustness of your program?
+- How will you store your data? What variables will you require and what type of data will your variables store (e.g. text, numeric, Boolean)? Will you store data in collections (e.g.lists, arrays or dictionaries) to improve the structure, flexibility and robustness of your program?
 - How will you structure your program? What procedural structure will your program require? Will you create functions/method/procedures to improve the structure, flexibility and robustness of your program? What parameters and/or return values would be required?
 - How will you validate input and give feedback to the user? What methods will you use to restrict and/or validate input. When will the program display output to the user?
 
 Development:
-- You should break the program up into components. Think about what information each component will need to do its job, and what information it will pass on to the rest of the program. Code, test and debug each componentseparately. As you complete each section, you should save your code with a new version number. 
+- You should break the program up into components. Think about what information each component will need to do its job, and what information it will pass on to the rest of the program. Code, test and debug each component separately. As you complete each section, you should save your code with a new version number. 
 
-**Note**: To test a program in a comprehensive way, you should think about how you will test the program for various cases such as expected, boundary and unexpected input. It is often useful to note down what you want to test and what you expect to happen, as well as what actually happened. Testing can be demonstrated by making a brief screencast showing the program being comprehensively tested. Ifdesired, you can take screenshots of your screencast and annotate them.
-- Ensure that you comment your code appropriately,as you develop itand use variable/module names and comments that describe code function and behaviour.
+**Note**: To test a program in a comprehensive way, you should think about how you will test the program for various cases such as expected, boundary and unexpected input. It is often useful to note down what you want to test and what you expect to happen, as well as what actually happened. Testing can be demonstrated by making a brief screencast showing the program being comprehensively tested. If desired, you can take screenshots of your screencast and annotate them.
+- Ensure that you comment your code appropriately, as you develop it and use variable/module names and comments that describe code function and behaviour.
 - Ensure that you have followed conventions for the programming language of your choice and that your program is a well-structured, logical response to the task. 
-- You should ensure that your code is robust andthat it handles expected, boundary and invalid cases.
+- You should ensure that your code is robust and that it handles expected, boundary and invalid cases.
 - Wherever possible you should try to ensure that your code has a flexible structure to allow for continued development.
