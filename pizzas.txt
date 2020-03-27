@@ -1,0 +1,12 @@
+Cheesy Garlic,regular
+Peperoni,regular
+Margherita,regular
+Calzone,regular
+Marinara,regular
+Pepperoni,regular
+Chicago-Style Deep Dish,regular
+New York-Style,gourmet
+Caprese,gourmet
+Manakish,gourmet
+Capricciosa,gourmet
+Bianca,gourmet
