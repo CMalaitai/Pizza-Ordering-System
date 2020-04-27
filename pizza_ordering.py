@@ -1,4 +1,5 @@
 import tkinter as tk
+import pizzas
 
 def order_method():
     # 1 = Pick Up (No extra cost)
@@ -10,56 +11,61 @@ def order_method():
         return(3)
 
 def calculate_cost():
+    print()
+
+def pizza_list():
+    file = open("pizzas.txt", "r")
+    pizza_menu = []
+
+    for pizza in file:
+        p = pizza.split(",")
+        pizza_menu.append(p[0])
+    
+    return pizza_menu
+
+def window(var):
+    root = tk.Tk()
+
     cost = 0
-    cost = cost + order_method()
-    cost_label.configure(text="${}".format(cost))
 
+    if(var == 2):
+        cost = cost + 3
 
-root = tk.Tk()
+    pizza_one = tk.StringVar()
+    pizza_two = tk.StringVar()
+    pizza_three = tk.StringVar()
+    pizza_four = tk.StringVar()
+    pizza_five = tk.StringVar()
 
-title_label = tk.Label(root, text="Pizza Ordering\nSystem")
-title_label.grid(row = 0, column = 0, columnspan = 2)
+    pizza_one.set("Please select a pizza")
+    pizza_two.set("Please select a pizza")
+    pizza_three.set("Please select a pizza")
+    pizza_four.set("Please select a pizza")
+    pizza_five.set("Please select a pizza")
 
-var = tk.IntVar()
-var.set(0)
+    pizza_menu = pizza_list()
 
-pizza_options = []
-f = open("pizzas.txt","r")
-for i in f:
-    pizza = i.split(",")
-    pizza_options.append(pizza[0])
-f.close()
+    pizza_one = tk.OptionMenu(root, pizza_one, *pizza_menu)
+    pizza_one.grid(row = 2, column = 0)
 
-pizza = tk.StringVar(root)
-pizza.set(pizza_options[0])
+    pizza_two = tk.OptionMenu(root, pizza_two, *pizza_menu)
+    pizza_two.grid(row = 3, column = 0)
 
-pickup_radiobutton = tk.Radiobutton(root, text="Pick Up", variable =var, value=1)
-pickup_radiobutton.grid(row = 1, column = 0)
-delivery_radiobutton = tk.Radiobutton(root, text="Delivery", variable = var, value=2)
-delivery_radiobutton.grid(row = 1, column = 1)
+    pizza_three = tk.OptionMenu(root, pizza_three, *pizza_menu)
+    pizza_three.grid(row = 4, column = 0)
 
-pizza_one = tk.OptionMenu(root, pizza, *pizza_options)
-pizza_one.grid(row = 2, column = 0)
+    pizza_four = tk.OptionMenu(root, pizza_four, *pizza_menu)
+    pizza_four.grid(row = 5, column = 0)
 
-pizza_two = tk.OptionMenu(root, pizza, *pizza_options)
-pizza_two.grid(row = 3, column = 0)
+    pizza_five = tk.OptionMenu(root, pizza_five, *pizza_menu)
+    pizza_five.grid(row = 6, column = 0)
 
-pizza_three = tk.OptionMenu(root, pizza, *pizza_options)
-pizza_three.grid(row = 4, column = 0)
+    cost_title = tk.Label(root, text="")
+    cost_title.grid(row = 7, column = 0)
 
-pizza_four = tk.OptionMenu(root, pizza, *pizza_options)
-pizza_four.grid(row = 5, column = 0)
+    cost_title.configure(text = "Price: ${}".format(str(cost)))
 
-pizza_five = tk.OptionMenu(root, pizza, *pizza_options)
-pizza_five.grid(row = 6, column = 0)
+    order_button = tk.Button(root, text="Calculate", command = calculate_cost)
+    order_button.grid(row = 8, column = 0, columnspan = 2)
 
-cost_title = tk.Label(root, text="Price:")
-cost_title.grid(row = 7, column = 0)
-
-cost_label = tk.Label(root, text="")
-cost_label.grid(row = 7, column = 1)
-
-order_button = tk.Button(root, text="Calculate", command = calculate_cost)
-order_button.grid(row = 8, column = 0, columnspan = 2)
-
-root.mainloop()
+    root.mainloop()
